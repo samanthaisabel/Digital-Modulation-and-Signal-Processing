@@ -13,7 +13,7 @@
 
 ---
 
-### 🛠️ Technical Skillset
+### 🛠️ Technical Skills
 *   **Digital Modulation:** Implementation of **ASK**, **FSK**, and Phase-reversal techniques (**BPSK/QPSK**).
 *   **Spread Spectrum:** Bandwidth spreading and despreading using **Direct Sequence Spread Spectrum (DSSS)** and PN codes.
 *   **SDR & Sampling:** Advanced signal processing involving **Undersampling** and intentional aliasing for SDR optimization.
@@ -37,12 +37,22 @@
 &nbsp;&nbsp;&nbsp;&nbsp; [📻 Undersampling in Software Defined Radio (SDR)](#sdr)
 
 **Analysis & Footnotes** <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [🎯 Objectives](#objectives) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [💡 Key Findings](#findings) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [📈 Final Conclusion](#conclusion) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [🛠️ Summary](#summary)
 
-
 ---
+<a name="objectives"></a>
+## 🎯 Objectives
+<details>
+<summary><b>View Objectives</b></summary>
+
+*   **Waveform Synthesis & Analysis:** Implement and evaluate core digital modulation schemes (**ASK, FSK, PSK**) to observe real-world carrier transitions in amplitude, frequency, and phase.
+*   **System Robustness:** Analyze **DSSS** and **Bandwidth Limiting** techniques to determine their effectiveness in improving noise immunity and signal security.
+*   **Advanced DSP Implementation:** Validate **SDR Undersampling** and **PCM recovery** methods to optimize high-frequency signal processing and reconstruction accuracy.
+
+</details>
 
 <a name="ask"></a>
 ## 📶 Amplitude Shift Keying (ASK)
@@ -54,11 +64,16 @@
 ### Introduction
 ASK is a digital modulation technique where the amplitude of a carrier signal is varied according to the digital data. Binary information is represented by different amplitude levels while frequency and phase remain constant.
 
-### Objectives
-* Understand the working principle of ASK.
-* Generate an ASK signal from digital data input.
-* Observe waveform behavior using signal monitoring equipment.
-* Analyze performance in the presence of noise.
+### Block Diagram
+<details>
+<summary><b>View ASK Configuration</b></summary>
+<p align="center">
+  <img src="assets/Amplitude%20Shift%20Keying/ASK%20Block%20Diagrams/Block%20Diagram%201%20ASK.png" height="220">
+  <img src="assets/Amplitude%20Shift%20Keying/ASK%20Block%20Diagrams/Block%20Diagram%202%20ASK.png" height="220">
+  <img src="assets/Amplitude%20Shift%20Keying/ASK%20Block%20Diagrams/Block%20Diagram%203%20ASK.png" height="220">
+  <img src="assets/Amplitude%20Shift%20Keying/ASK%20Block%20Diagrams/Block%20Diagram%204%20ASK.png" height="220">
+</p>
+</details>
 
 ### Theoretical Background
 The ASK modulated signal $s(t)$ is defined as:
@@ -104,7 +119,6 @@ Successfully verified that digital information can be transmitted by controlling
     <br>
     <img src="assets/Amplitude%20Shift%20Keying/Experiment-15-Noise-step6.png" height="250"><img src="assets/Amplitude%20Shift%20Keying/Experiment-15-Noise-step8.png" height="250">
   </div>
-
 </details>
 </details>
 
@@ -120,10 +134,15 @@ Successfully verified that digital information can be transmitted by controlling
 ### Introduction
 FSK is a digital modulation method in which the frequency of a carrier signal changes according to the digital input data. Unlike ASK, the carrier amplitude remains constant while two different frequencies represent binary values.
 
-### Objectives
-* Understand the concept of FSK modulation.
-* Generate FSK signals from binary data.
-* Observe frequency switching between binary states.
+### Block Diagram
+<details>
+<summary><b>View FSK Configuration</b></summary>
+<p align="center">
+  <img src="assets/Frequency%20Shift%20Keying/FSK%20Block%20Diagrams/Block%20Diagram%201%20FSK.png" height="220">
+  <img src="assets/Frequency%20Shift%20Keying/FSK%20Block%20Diagrams/Block%20Diagram%202%20FSK.png" height="220">
+  <img src="assets/Frequency%20Shift%20Keying/FSK%20Block%20Diagrams/Block%20Diagram%203%20FSK.png" height="220">
+</p>
+</details>
 
 ### Theoretical Background
 Binary FSK uses two distinct frequencies:
@@ -169,10 +188,17 @@ FSK provides improved signal reliability by encoding digital information in freq
 ### Introduction
 BPSK is a digital modulation technique where the phase of the carrier signal is shifted according to the binary input data. It is one of the simplest and most reliable phase modulation schemes.
 
-### Objectives
-* Study the operation of BPSK modulation.
-* Generate BPSK signals from digital input.
-* Observe phase transitions in the waveform.
+### Block Diagram
+<details>
+<summary><b>View BPSK Configuration</b></summary>
+<p align="center">
+  <img src="assets/Binary%20Phase%20Shift%20Keying/BPSK%20Block%20Diagrams/Block%20Diagram%201%20BPSK.png" height="220">
+  <img src="assets/Binary%20Phase%20Shift%20Keying/BPSK%20Block%20Diagrams/Block%20Diagram%202%20BPSK.png" height="220">
+  <img src="assets/Binary%20Phase%20Shift%20Keying/BPSK%20Block%20Diagrams/Block%20Diagram%203%20BPSK.png" height="220">
+  <img src="assets/Binary%20Phase%20Shift%20Keying/BPSK%20Block%20Diagrams/Block%20Diagram%204%20BPSK.png" height="220">
+</p>
+</details>
+
 
 ### Theoretical Background
 In BPSK, the phase shifts by 180° depending on the binary input:
@@ -221,10 +247,14 @@ BPSK is an efficient and reliable digital modulation technique widely used in wi
 ### Introduction
 QPSK is a digital modulation technique that transmits two bits of information per symbol by using four different phase states. This improves spectral efficiency compared to BPSK.
 
-### Objectives
-* Understand the operation of QPSK modulation.
-* Observe the four phase states of QPSK.
-* Analyze symbol representation.
+### Block Diagram
+<details>
+<summary><b>View QPSK Configuration</b></summary>
+<p align="center">
+  <img src="assets/Quadrature%20Phase%20Shift%20Keying/QPSK%20Block%20Diagrams/Block%20Diagram%201%20QPSK.png" height="220">
+  <img src="assets/Quadrature%20Phase%20Shift%20Keying/QPSK%20Block%20Diagrams/Block%20Diagram%202%20QPSK.png" height="220">
+</p>
+</details>
 
 ### Theoretical Background
 QPSK uses four phase angles representing bit pairs:
@@ -278,17 +308,21 @@ QPSK provides improved spectral efficiency and is widely used in modern networks
 ### Introduction
 Direct Sequence Spread Spectrum (DSSS) spreads the transmitted signal across a wider frequency band using a pseudo-random code. This improves signal security and noise immunity.
 
-### Objectives
-* Understand DSSS modulation principles.
-* Observe signal spreading using a pseudo-random sequence.
-* Recover the original signal through demodulation.
+### Block Diagram
+<details>
+<summary><b>View DSSS Configuration</b></summary>
+<p align="center">
+  <img src="assets/DSSS%20Modulation%20and%20Demodulation/DSSS%20Block%20Diagrams/Block%20Diagram%201%20DSSS.png" height="220">
+  <img src="assets/DSSS%20Modulation%20and%20Demodulation/DSSS%20Block%20Diagrams/Block%20Diagram%202%20DSSS.png" height="220">
+</p>
+</details>
 
 ### Theoretical Background
 The original data signal is multiplied by a high-rate pseudo-random spreading code. This spreads the signal energy over a wide frequency band. At the receiver, the same code is used for reconstruction.
 
 ### Laboratory Results
 * Transmitted signal bandwidth increased after spreading.
-* The receiver successfully recovered original data using the same spreading code.
+* The receiver successfully recovered the original data using the same spreading code.
 * Interference effects were reduced due to spreading.
 
 ### Discussion
@@ -351,10 +385,14 @@ DSSS modulation enhances signal robustness and is widely used in GPS and Wi-Fi c
 ### Introduction
 SDR uses digital signal processing for functions traditionally handled by hardware. Undersampling allows high-frequency signals to be sampled at lower rates while preserving the information.
 
-### Objectives
-* Study undersampling techniques in SDR systems.
-* Observe aliasing effects in sampled signals.
-* Analyze signal recovery using digital processing.
+### Block Diagram
+<details>
+<summary><b>View SDR Undersampling Configuration</b></summary>
+<p align="center">
+  <img src="assets/Undersampling%20in%20%20Software%20defined%20radio/Undersampling%20Block%20Diagrams/Block%20Diagram%201%20Undersampling.png" height="220">
+  <img src="assets/Undersampling%20in%20%20Software%20defined%20radio/Undersampling%20Block%20Diagrams/Block%20Diagram%202%20Undersampling.png" height="220">
+</p>
+</details>
 
 ### Theoretical Background
 Undersampling intentionally uses aliasing to shift high-frequency signals into a lower frequency band. If the sampling frequency is carefully selected, the desired signal can be reconstructed digitally.
