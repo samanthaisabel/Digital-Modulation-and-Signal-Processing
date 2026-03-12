@@ -9,14 +9,14 @@
 
 ---
 
-## 🛠️ Technical Skillset
+### 🛠️ Technical Skillset
 *   **Digital Modulation:** Implementation of **ASK**, **FSK**, and Phase-reversal techniques (**BPSK/QPSK**).
 *   **Spread Spectrum:** Bandwidth spreading and despreading using **Direct Sequence Spread Spectrum (DSSS)** and PN codes.
 *   **SDR & Sampling:** Advanced signal processing involving **Undersampling** and intentional aliasing for SDR optimization.
 
 ---
 
-## 🔬 System Analysis & Key Findings
+### 🔬 System Analysis & Key Findings
 *   **Modulation Robustness:** Confirmed that **BPSK/QPSK** provides superior noise rejection compared to amplitude-based keying (ASK).
 *   **Spectral Efficiency:** Successfully doubled data throughput within a fixed bandwidth using **Quadrature Phase States**.
 *   **Interference Mitigation:** Validated that **DSSS** significantly reduces the impact of narrowband interference through processing gain.
@@ -35,7 +35,7 @@
 ---
 
 <a name="ask"></a>
-# 📶 Amplitude Shift Keying (ASK)
+## 📶 Amplitude Shift Keying (ASK)
 *Digital information represented by varying carrier amplitude via netTIMS modulation blocks.*
 
 <details>
@@ -51,15 +51,18 @@ ASK is a digital modulation technique where the amplitude of a carrier signal is
 * Analyze performance in the presence of noise.
 
 ### Theoretical Background
-Digital data controls the amplitude of a sinusoidal carrier signal. When the input bit is 1, the carrier is transmitted with full amplitude; for 0, the amplitude is reduced or turned off.
+The ASK modulated signal $s(t)$ is defined as:
 
-**Mathematical Expression:**
-$$s(t) = \begin{cases} A_c \cos(2\pi f_c t), & \text{for binary 1} \\ 0, & \text{for binary 0} \end{cases}$$
-*Where $A_c$ = carrier amplitude and $f_c$ = carrier frequency.*
+$$s(t) = A_c \cos(2\pi f_c t) \quad \text{for binary 1}$$
+$$s(t) = 0 \quad \text{for binary 0}$$
+
+**Where:**
+* $A_c$ = Carrier amplitude
+* $f_c$ = Carrier frequency
 
 ### Laboratory Results
 * Binary input signals were successfully converted into ASK waveforms.
-* Carrier amplitude appeared only during transmission of binary 1.
+* Carrier amplitude appeared only during the transmission of binary 1.
 * Small amplitude distortions were observed when interference was present.
 
 ### Discussion
@@ -68,20 +71,37 @@ The experiment demonstrated that ASK encodes data through variations in carrier 
 ### Conclusion
 Successfully verified that digital information can be transmitted by controlling carrier amplitude. However, results confirmed that ASK is susceptible to noise, affecting signal reliability.
 
+### Documentation
 <details>
 <summary><b>View Laboratory Documentation</b></summary>
-<p align="center">
-  <img src="assets/ASK/Experiment-15-Part-A.jpg" height="150">
-  <img src="assets/ASK/Experiment-15-Noise-step3.jpg" height="150">
-  <img src="assets/ASK/Experiment-15-Part-C-step20.jpg" height="150">
-</p>
+
+  <p align="center">
+    <strong>Signal Analysis</strong><br>
+    <img src="assets/Amplitude%20Shift%20Keying/Experiment-15-Part-A.png" height="250">
+    <img src="assets/Amplitude%20Shift%20Keying/Experiment-15-Part-A%20%282msdiv%29.png" height="250">
+    <img src="assets/Amplitude%20Shift%20Keying/Experiment15-PartA-step7.png" height="250">
+  </p>
+
+  <p align="center">
+    <img src="assets/Amplitude%20Shift%20Keying/Experiment-15-Part-A-step13.png" height="250">
+    <img src="assets/Amplitude%20Shift%20Keying/Experiment-15-Part-B-step17.png" height="250">
+    <img src="assets/Amplitude%20Shift%20Keying/Experiment-15-Part-C-step20.png" height="250">
+  </p>
+
+  <div align="center">
+    <strong>Noise Performance</strong><br>
+    <img src="assets/Amplitude%20Shift%20Keying/Experiment-15-Noise-step3.png" height="250"><img src="assets/Amplitude%20Shift%20Keying/Experiment-15-Noise-step5.png" height="250">
+    <br>
+    <img src="assets/Amplitude%20Shift%20Keying/Experiment-15-Noise-step6.png" height="250"><img src="assets/Amplitude%20Shift%20Keying/Experiment-15-Noise-step8.png" height="250">
+  </div>
+
 </details>
 </details>
 
 ---
 
 <a name="fsk"></a>
-# 〰️ Frequency Shift Keying (FSK)
+## 〰️ Frequency Shift Keying (FSK)
 *Frequency-based encoding for improved noise immunity.*
 
 <details>
@@ -106,17 +126,23 @@ Binary FSK uses two distinct frequencies:
 * Carrier amplitude remained stable throughout the experiment.
 
 ### Discussion
-Results showed that FSK effectively transmits data through frequency variation. Because noise typically affects signal amplitude rather than frequency, FSK demonstrated improved reliability over ASK.
+Results showed that FSK effectively transmits data through frequency variation, demonstrating improved reliability over ASK since noise primarily impacts signal amplitude rather than frequency.
 
 ### Conclusion
 FSK provides improved signal reliability by encoding digital information in frequency variations rather than amplitude changes.
 
+### Documentation
 <details>
 <summary><b>View Laboratory Documentation</b></summary>
 <p align="center">
-  <img src="assets/FSK/Experiment16-Part-A-step12.jpg" height="180">
-  <img src="assets/FSK/Experiment16-Part-B-step18.jpg" height="180">
-  <img src="assets/FSK/Experiment16-Part-C-Output.jpg" height="180">
+  <strong>Frequency Modulation & Step Analysis</strong><br>
+  <img src="assets/Frequency%20Shift%20Keying/Experiment16-Part-A-step12.png" height="220">
+  <img src="assets/Frequency%20Shift%20Keying/Experiment16-Part-B-step18.png" height="220">
+  <img src="assets/Frequency%20Shift%20Keying/Experiment16-Part-B-step21.png" height="220">
+</p>
+<p align="center">
+  <strong>Final Signal Output</strong><br>
+  <img src="assets/Frequency%20Shift%20Keying/Experiment16-Part-C-Output.png" height="220">
 </p>
 </details>
 </details>
@@ -124,7 +150,7 @@ FSK provides improved signal reliability by encoding digital information in freq
 ---
 
 <a name="bpsk"></a>
-# 🔄 Binary Phase Shift Keying (BPSK)
+## 🔄 Binary Phase Shift Keying (BPSK)
 *Phase-reversal modulation for high-reliability data links.*
 
 <details>
@@ -154,12 +180,21 @@ The experiment confirmed that BPSK transmits information through phase changes. 
 ### Conclusion
 BPSK is an efficient and reliable digital modulation technique widely used in wireless communication systems.
 
+### Documentation
 <details>
 <summary><b>View Laboratory Documentation</b></summary>
 <p align="center">
-  <img src="assets/BPSK/Part-A.jpg" height="180">
-  <img src="assets/BPSK/Part-Noise-0dB.jpg" height="180">
-  <img src="assets/BPSK/Part-Noise-20dB.jpg" height="180">
+  <strong>Phase Transition Analysis</strong><br>
+  <img src="assets/Binary%20Phase%20Shift%20Keying/Part%20A.png" height="220">
+  <img src="assets/Binary%20Phase%20Shift%20Keying/Part%20B.png" height="220">
+  <img src="assets/Binary%20Phase%20Shift%20Keying/Part%20C.png" height="220">
+</p>
+
+<p align="center">
+  <strong>Noise</strong><br>
+  <img src="assets/Binary%20Phase%20Shift%20Keying/Part%20Noise%280dB%29.png" height="220">
+  <img src="assets/Binary%20Phase%20Shift%20Keying/Part%20Noise%28-6dB%29.png" height="220">
+  <img src="assets/Binary%20Phase%20Shift%20Keying/Part%20Noise%28-20dB%29.png" height="220">
 </p>
 </details>
 </details>
@@ -167,7 +202,7 @@ BPSK is an efficient and reliable digital modulation technique widely used in wi
 ---
 
 <a name="qpsk"></a>
-# ⏹️ Quadrature Phase Shift Keying (QPSK)
+## ⏹️ Quadrature Phase Shift Keying (QPSK)
 *Four-phase modulation for doubled spectral efficiency.*
 
 <details>
@@ -196,12 +231,27 @@ QPSK improves data transmission efficiency while maintaining the same bandwidth 
 ### Conclusion
 QPSK provides improved spectral efficiency and is widely used in modern networks such as satellite and wireless systems.
 
+### Documentation
 <details>
 <summary><b>View Laboratory Documentation</b></summary>
 <p align="center">
-  <img src="assets/QPSK/Part-A-Step-1-10.jpg" height="150">
-  <img src="assets/QPSK/Part-B-Phase-Shifter-CW-0deg.jpg" height="150">
-  <img src="assets/QPSK/Part-B-Phase-Shifter-CCW-180deg.jpg" height="150">
+  <strong>Generating a QPSK Signal</strong><br>
+  <img src="assets/Quadrature%20Phase%20Shift%20Keying/Part%20A%20Step%201-10.png" height="180">
+  <img src="assets/Quadrature%20Phase%20Shift%20Keying/Part%20A%20Step%2011-17.png" height="180">
+  <img src="assets/Quadrature%20Phase%20Shift%20Keying/Part%20A%20Step%2018-21.png" height="180">
+</p>
+<p align="center">
+  <img src="assets/Quadrature%20Phase%20Shift%20Keying/Part%20A%20Step%2022-24.png" height="180">
+  <img src="assets/Quadrature%20Phase%20Shift%20Keying/Part%20A%20Step%2025.png" height="180">
+</p>
+<p align="center">
+  <strong>Using phase discrimination to pick out one of the QPSK signal's BPSK signals</strong><br>
+  <img src="assets/Quadrature%20Phase%20Shift%20Keying/Part%20B%20Phase%20Shifter%20Clockwise%200%20deg.png" height="220">
+  <img src="assets/Quadrature%20Phase%20Shift%20Keying/Part%20B%20Phase%20Shifter%20Clockwise%20180%20deg.png" height="220">
+</p>
+<p align="center">
+  <img src="assets/Quadrature%20Phase%20Shift%20Keying/Part%20B%20Phase%20Shifter%20Counter%20Clockwise%200%20deg.png" height="220">
+  <img src="assets/Quadrature%20Phase%20Shift%20Keying/Part%20B%20Phase%20Shifter%20Counter%20Clockwise%20180%20deg.png" height="220">
 </p>
 </details>
 </details>
@@ -209,7 +259,7 @@ QPSK provides improved spectral efficiency and is widely used in modern networks
 ---
 
 <a name="dsss"></a>
-# 🛰️ DSSS Modulation and Demodulation
+## 🛰️ DSSS Modulation and Demodulation
 *Wideband signal spreading for secure and interference-resistant communication.*
 
 <details>
@@ -237,12 +287,44 @@ DSSS improves communication reliability by distributing energy across a wider ra
 ### Conclusion
 DSSS modulation enhances signal robustness and is widely used in GPS and Wi-Fi communication.
 
+### Documentation
 <details>
 <summary><b>View Laboratory Documentation</b></summary>
+
 <p align="center">
-  <img src="assets/DSSS/Lab-19-Part-A.jpg" height="150">
-  <img src="assets/DSSS/Lab-19-Part-D-no30-1.jpg" height="150">
-  <img src="assets/DSSS/Lab-19-Part-D-no44.jpg" height="150">
+  <strong>Signal Spreading & PN Code</strong><br>
+  <img src="assets/DSSS%20Modulation%20and%20Demodulation/Lab%2019%20Part%20A.png" height="220">
+  <img src="assets/DSSS%20Modulation%20and%20Demodulation/Lab%2019%20Part%20C-no18.png" height="220">
+</p>
+<p align="center">
+  <img src="assets/DSSS%20Modulation%20and%20Demodulation/Lab%2019%20Part%20C-no19.png" height="220">
+  <img src="assets/DSSS%20Modulation%20and%20Demodulation/Lab%2019%20Part%20C-no21.png" height="220">
+</p>
+
+<p align="center">
+  <strong>Demodulation</strong><br>
+  <img src="assets/DSSS%20Modulation%20and%20Demodulation/Lab%2019%20Part%20D-no28.png" height="220">
+  <img src="assets/DSSS%20Modulation%20and%20Demodulation/Lab%2019%20Part%20D-no29.png" height="220">
+</p>
+<p align="center">
+  <img src="assets/DSSS%20Modulation%20and%20Demodulation/Lab%2019%20Part%20D-no30-1.png" height="220">
+  <img src="assets/DSSS%20Modulation%20and%20Demodulation/Lab%2019%20Part%20D-no30-2.png" height="220">
+</p>
+
+<p align="center">
+  <strong>Frequency Bounds & Optimization</strong><br>
+  <img src="assets/DSSS%20Modulation%20and%20Demodulation/Lab%2019%20Part%20D-no31-1%20minfreq.png" height="220">
+  <img src="assets/DSSS%20Modulation%20and%20Demodulation/Lab%2019%20Part%20D-no31-2%20maxfreq.png" height="220">
+</p>
+<p align="center">
+  <img src="assets/DSSS%20Modulation%20and%20Demodulation/Lab%2019%20Part%20D-no34.png" height="220">
+  <img src="assets/DSSS%20Modulation%20and%20Demodulation/Lab%2019%20Part%20D-no38.png" height="220">
+</p>
+<p align="center">
+  <strong>Advanced Signal Characterization</strong><br>
+  <img src="assets/DSSS%20Modulation%20and%20Demodulation/Lab%2019%20Part%20D-no40.png" height="220">
+  <img src="assets/DSSS%20Modulation%20and%20Demodulation/Lab%2019%20Part%20D-no42.png" height="220">
+  <img src="assets/DSSS%20Modulation%20and%20Demodulation/Lab%2019%20Part%20D-no44.png" height="220">
 </p>
 </details>
 </details>
@@ -250,7 +332,7 @@ DSSS modulation enhances signal robustness and is widely used in GPS and Wi-Fi c
 ---
 
 <a name="sdr"></a>
-# 📻 Undersampling in Software Defined Radio (SDR)
+## 📻 Undersampling in Software Defined Radio (SDR)
 *Efficient high-frequency processing through intentional aliasing.*
 
 <details>
@@ -278,15 +360,42 @@ Undersampling can simplify receiver hardware in SDR systems, though careful desi
 ### Conclusion
 Undersampling enables efficient digital processing of high-frequency signals in SDR systems, reducing hardware complexity while maintaining signal integrity.
 
+### Documentation
 <details>
 <summary><b>View Laboratory Documentation</b></summary>
+
 <p align="center">
-  <img src="assets/SDR/Lab-20-Part-A-no6.jpg" height="180">
-  <img src="assets/SDR/Lab-20-Part-C-no21.jpg" height="180">
+  <strong>Setting up a bandwidth limited signal</strong><br>
+  <img src="assets/Undersampling%20in%20%20Software%20defined%20radio/Lab%2020%20Part%20A-no6.png" height="280">
+</p>
+
+<p align="center">
+  <strong>Direct down-conversion using undersampling</strong><br>
+  <img src="assets/Undersampling%20in%20%20Software%20defined%20radio/Lab%2020%20Part%20B-no8.png" height="280">
+  <img src="assets/Undersampling%20in%20%20Software%20defined%20radio/Lab%2020%20Part%20B-no10.png" height="280">
+</p>
+
+<p align="center">
+  <strong>Synchronisation</strong><br>
+  <img src="assets/Undersampling%20in%20%20Software%20defined%20radio/Lab%2020%20Part%20C-no19.png" height="280">
+  <img src="assets/Undersampling%20in%20%20Software%20defined%20radio/Lab%2020%20Part%20C-no21.png" height="280">
 </p>
 </details>
 </details>
 
 ---
 
-<p align="right"><a href="#readme-top">Back to top ↑</a></p>
+### 💡 Overall Takeaways & Analysis
+*Practical insights into digital link performance and signal processing.*
+
+*   **Modulation Gained Knowledge:** Evaluated the trade-offs between low-complexity hardware (ASK/RFID) and high-reliability links (PSK), identifying why certain schemes are preferred for mission-critical telemetry.
+*   **Bandwidth Efficiency Validation:** Successfully simulated **QPSK** to achieve double the data throughput within a fixed bandwidth—directly replicating the spectral efficiency standards used in **5G** and **Wi-Fi** networks.
+*   **Interference Recovery Skills:** Used **DSSS** (Spread Spectrum) to observe how processing gain allows a signal to be recovered even when buried under narrowband interference or a high noise floor.
+*   **SDR Theory Testing:** Confirmed **Software Defined Radio** architectures by using intentional aliasing/undersampling to prove that high-frequency carriers can be reconstructed with lower ADC requirements.
+
+### 📈 Final Conclusion
+This laboratory series served as a bridge between theoretical communication models and practical system constraints. By leveraging the netTIMS Simulator, I was able to stress-test digital links against noise and bandwidth limitations that are difficult to isolate in raw hardware. This experience provides a solid foundation for validating, troubleshooting, and optimizing modern RF and SDR systems in a controlled, data-driven environment.
+
+---
+
+<p align="right"><a href="#readme-top">Back to top ↑</a></a></p>
