@@ -389,7 +389,7 @@ Undersampling enables efficient digital processing of high-frequency signals in 
 
 ---
 
-### 💡 Overall Takeaways & Analysis
+### 💡 Key Findings
 *Practical insights into digital link performance and signal processing.*
 
 *   **Modulation Gained Knowledge:** Evaluated the trade-offs between low-complexity hardware (ASK/RFID) and high-reliability links (PSK), identifying why certain schemes are preferred for mission-critical telemetry.
@@ -397,12 +397,14 @@ Undersampling enables efficient digital processing of high-frequency signals in 
 *   **Interference Recovery Skills:** Used **DSSS** (Spread Spectrum) to observe how processing gain allows a signal to be recovered even when buried under narrowband interference or a high noise floor.
 *   **SDR Theory Testing:** Confirmed **Software Defined Radio** architectures by using intentional aliasing/undersampling to prove that high-frequency carriers can be reconstructed with lower ADC requirements.
 
+---
+
 ### 📈 Final Conclusion
 This laboratory series served as a bridge between theoretical communication models and practical system constraints. By leveraging the netTIMS Simulator, I was able to stress-test digital links against noise and bandwidth limitations that are difficult to isolate in raw hardware. This experience provides a solid foundation for validating, troubleshooting, and optimizing modern RF and SDR systems in a controlled, data-driven environment.
 
 ---
 
-### 🛠️ Lab Environment Summary
+### 🛠️ Summary
 *   **Simulator:** netTIMS
 *   **Measurement:** Virtual Oscilloscope & Frequency Analyzer
 *   **Verification:** All theoretical models validated against 1:1 hardware-accurate noise and bandwidth constraints.
