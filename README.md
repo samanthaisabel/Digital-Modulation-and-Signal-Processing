@@ -29,12 +29,18 @@
 ---
 
 ## 📋 Table of Contents
-* [Amplitude Shift Keying (ASK)](#ask)
-* [Frequency Shift Keying (FSK)](#fsk)
-* [Binary Phase Shift Keying (BPSK)](#bpsk)
-* [Quadrature Phase Shift Keying (QPSK)](#qpsk)
-* [DSSS Modulation and Demodulation](#dsss)
-* [Undersampling in Software Defined Radio (SDR)](#sdr)
+&nbsp;&nbsp;&nbsp;&nbsp; [📶 Amplitude Shift Keying (ASK)](#ask) <br>
+&nbsp;&nbsp;&nbsp;&nbsp; [〰️ Frequency Shift Keying (FSK)](#fsk) <br>
+&nbsp;&nbsp;&nbsp;&nbsp; [🔄 Binary Phase Shift Keying (BPSK)](#bpsk) <br>
+&nbsp;&nbsp;&nbsp;&nbsp; [🛰️ Quadrature Phase Shift Keying (QPSK)](#qpsk) <br>
+&nbsp;&nbsp;&nbsp;&nbsp; [🛡️ DSSS Modulation and Demodulation](#dsss) <br>
+&nbsp;&nbsp;&nbsp;&nbsp; [📻 Undersampling in Software Defined Radio (SDR)](#sdr)
+
+**Analysis & Footnotes** <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [💡 Key Findings](#findings) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [📈 Final Conclusion](#conclusion) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [🛠️ Summary](#summary)
+
 
 ---
 
@@ -389,6 +395,7 @@ Undersampling enables efficient digital processing of high-frequency signals in 
 
 ---
 
+<a name="findings"></a>
 ### 💡 Key Findings
 *Practical insights into digital link performance and signal processing.*
 
@@ -399,11 +406,13 @@ Undersampling enables efficient digital processing of high-frequency signals in 
 
 ---
 
+<a name="conclusion"></a>
 ### 📈 Final Conclusion
 This laboratory series served as a bridge between theoretical communication models and practical system constraints. By leveraging the netTIMS Simulator, I was able to stress-test digital links against noise and bandwidth limitations that are difficult to isolate in raw hardware. This experience provides a solid foundation for validating, troubleshooting, and optimizing modern RF and SDR systems in a controlled, data-driven environment.
 
 ---
 
+<a name="summary"></a>
 ### 🛠️ Summary
 *   **Simulator:** netTIMS
 *   **Measurement:** Virtual Oscilloscope & Frequency Analyzer
