@@ -1,11 +1,15 @@
 <a id="readme-top"></a>
 
-> [!IMPORTANT]
-> **Field:** `RF Engineering` • **Simulation:** `netTIMS (Telecoms Bench)`  
-> **Core Objective:** Validated digital modulation (ASK, PSK, QPSK, DSSS) and SDR undersampling theories to optimize spectral efficiency and noise immunity.
-
 # 📡 Digital Modulation & Signal Processing
 > **A systematic evaluation of digital keying, spread spectrum (DSSS), and SDR undersampling theories, focusing on spectral efficiency and noise immunity via the netTIMS simulator.**
+
+---
+
+> [!IMPORTANT]
+> - **Domain:** `RF & Wireless Communications`
+> - **Platform:** `netTIMS`
+> - **Methods:** `ASK` • `FSK` • `BPSK` • `QPSK` • `DSSS` • `SDR Undersampling`
+> - **Core Objective:** Evaluate and compare digital modulation schemes to determine their performance regarding spectral efficiency and noise immunity.
 
 ---
 
@@ -395,6 +399,13 @@ Undersampling enables efficient digital processing of high-frequency signals in 
 
 ### 📈 Final Conclusion
 This laboratory series served as a bridge between theoretical communication models and practical system constraints. By leveraging the netTIMS Simulator, I was able to stress-test digital links against noise and bandwidth limitations that are difficult to isolate in raw hardware. This experience provides a solid foundation for validating, troubleshooting, and optimizing modern RF and SDR systems in a controlled, data-driven environment.
+
+---
+
+### 🛠️ Lab Environment Summary
+*   **Simulator:** netTIMS
+*   **Measurement:** Virtual Oscilloscope & Frequency Analyzer
+*   **Verification:** All theoretical models validated against 1:1 hardware-accurate noise and bandwidth constraints.
 
 ---
 
